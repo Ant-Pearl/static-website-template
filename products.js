@@ -17,11 +17,9 @@ function expandProduct(event) {
   console.log(product.parentElement.getElementsByClassName('product-summary'))
   var productSummary = product.parentElement.getElementsByClassName('product-summary')[0]
   if (productSummary.style.position == 'relative') {
-    console.log('yo')
     productSummary.style.position = 'absolute'
     productSummary.style.visibility = 'hidden'
   } else {
-    console.log('nigga')
     productSummary.style.position = 'relative'
     productSummary.style.visibility = 'visible'
   }
