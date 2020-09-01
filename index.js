@@ -1,10 +1,12 @@
 if (document.readyState == 'loading') {
   document.addEventListener('DOMContentLoaded', ready)
 } else {
-  var imagesList = ["Images/placeholder.png", "Images/placeholder-green.png", "Images/placeholder-red.png", "Images/placeholder-purple.png"]
-  var currentImage = 0
+  console.log("test")
   ready()
 }
+
+var imagesList = ["Images/placeholder.png", "Images/placeholder-green.png", "Images/placeholder-red.png", "Images/placeholder-purple.png"]
+var currentImage = 0
 
 function ready() {
   var arrowLeft = document.getElementsByClassName('arrow-left')[0]
@@ -15,7 +17,8 @@ function ready() {
 }
 
 function nextImageAuto() {
-  currentImage = (currentImage + 1)%imagesList.length
+  imageTransition()
+  currentImage = (currentImage + 1)%(imagesList.length)
   if (currentImage > imagesList.length) {
     currentImage = 0
   }
@@ -23,16 +26,17 @@ function nextImageAuto() {
 }
 
 function nextImageLeft(event) {
-  currentImage = (currentImage - 1)%imagesList.length
+  imageTransition()
+  currentImage = (currentImage - 1)%(imagesList.length)
   if (currentImage < 0) {
     currentImage = 3
   }
-  console.log(currentImage)
   event.target.parentElement.getElementsByClassName("slideshow-image")[0].src = imagesList[currentImage]
 }
 
 function nextImageRight(event){
-  currentImage = (currentImage + 1)%imagesList.length
+  imageTransition()
+  currentImage = (currentImage + 1)%(imagesList.length)
   if (currentImage > imagesList.length) {
     currentImage = 0
   }
@@ -40,5 +44,14 @@ function nextImageRight(event){
 }
 
 function imageTransition() {
+  document.getElementsByClassName("slideshow-transition-image")[0].width = document.getElementsByClassName("slideshow-image")[0].width
   document.getElementsByClassName("slideshow-transition-image")[0].src = imagesList[currentImage]
+  document.getElementsByClassName("slideshow-transition-image")[0].style.transition = "0s"
+  document.getElementsByClassName("slideshow-transition-image")[0].style.opacity = 1
+  setTimeout(imageTransition2, 20)
+}
+
+function imageTransition2() {
+  document.getElementsByClassName("slideshow-transition-image")[0].style.transition = ".5s"
+  document.getElementsByClassName("slideshow-transition-image")[0].style.opacity = 0
 }

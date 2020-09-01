@@ -143,6 +143,7 @@ html, body {
 }
 
 .slideshow-image {
+  position: relative;
   align-self: center;
   margin: 2em 0;
   max-height: 600px;
@@ -153,6 +154,7 @@ html, body {
 
 .slideshow-transition-image {
   position: absolute;
+  margin: 2em 0;
   max-height: 600px;
   max-width: 75%;
   opacity: 0;
@@ -246,7 +248,7 @@ html, body {
 .product-summary-image {
   object-fit: cover;
   width: 50%;
-  height: 50%;
+  height: auto;
   overflow: hidden;
 }
 
@@ -256,8 +258,7 @@ html, body {
   padding: 5% 10%;
   font-size: 2em;
   border: 1px solid #999;
-  background-color: #aaa
-  transition: .5s
+  background-color: #aaa;
 }
 
 .product-summary-btn:hover {
