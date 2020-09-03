@@ -293,7 +293,7 @@ html, body {
 .product-page-image {
   margin: 5px;
   padding: 10px;
-  width: 350px;
+  width: min(350px, 90%);
   height: auto;
   transition: .5s;
 }
