@@ -293,7 +293,9 @@ html, body {
 .product-page-image {
   margin: 5px;
   padding: 10px;
-  width: min(350px, 90%);
+  /*width: min(350px, 90%);*/
+  object-fit: scale-down;
+  width: 350px;
   height: auto;
   transition: .5s;
 }
