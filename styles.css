@@ -292,10 +292,18 @@ html, body {
   font-size: var(--description-dynamic-font);
 }
 
+/*
 .product-page-gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+*/
+
+.product-page-gallery {
+  display: inline-block;
+  text-align: center;
+  align-items: center;
 }
 
 .product-page-image {
