@@ -22,4 +22,5 @@ function makeImageBig(event) {
     console.log(window.scrollY)
   }
   document.getElementsByClassName('product-page-image-big-container')[0].style.visibility = 'visible'
+  document.getElementsByClassName('product-page-image-big-container')[0].style.height = screen.height
 }
