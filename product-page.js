@@ -10,17 +10,27 @@ function ready() {
   var gallery = document.getElementsByClassName('product-page-image')
   for (var i = 0; i < gallery.length; i++) {
     image = gallery[i]
-    image.addEventListener('click', makeImageBig)
+    image.addEventListener('click', openImageBig)
   }
+  document.addEventListener('scroll', closeImageBig)
+  document.getElementsByClassName('pp-image-big-container')[0].addEventListener('click', closeImageBig)
+  document.getElementsByClassName('pp-image-big')[0].addEventListener('click', openFullSizeImage)
 }
 
-function makeImageBig(event) {
-  console.log(document.getElementsByClassName('main-header')[0].clientHeight)
-  if (window.scrollY > document.getElementsByClassName('main-header')[0].clientHeight){
-    console.log(document.getElementsByClassName('product-page-image-big-container')[0].style.top)
-    document.getElementsByClassName('product-page-image-big-container')[0].style.top = parseInt(window.scrollY) + 'px'
-    console.log(window.scrollY)
-  }
-  document.getElementsByClassName('product-page-image-big-container')[0].style.visibility = 'visible'
-  document.getElementsByClassName('product-page-image-big-container')[0].style.height = screen.height
+function openImageBig(event) {
+  document.getElementsByClassName('pp-image-big-container')[0].style.top = parseInt(window.scrollY) + 'px'
+  document.getElementsByClassName('pp-image-big-container')[0].height = screen.height + 100
+  document.getElementsByClassName('pp-image-big-container')[0].style.visibility = 'visible'
+  document.getElementsByClassName('pp-image-big-container')[0].style.height = screen.height
+  document.getElementsByClassName('pp-image-big')[0].src = event.target.src
+  console.log(document.getElementsByClassName('pp-image-big-container')[0].src)
+  console.log(event.target.src)
+}
+
+function closeImageBig(event) {
+  document.getElementsByClassName('pp-image-big-container')[0].style.visibility = 'hidden'
+}
+
+function openFullSizeImage(event) {
+  window.open(event.target.src)
 }
