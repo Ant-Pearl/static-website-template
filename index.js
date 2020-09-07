@@ -7,6 +7,8 @@ if (document.readyState == 'loading') {
 
 var imagesList = ["Images/placeholder.png", "Images/placeholder-green.png", "Images/placeholder-red.png", "Images/placeholder-purple.png"]
 var currentImage = 0
+var headerHeight = document.getElementsByTagName('header')[0].clientHeight
+var phoneElement = document.getElementsByClassName('peeker')[0]
 
 function ready() {
   var arrowLeft = document.getElementsByClassName('arrow-left')[0]
@@ -14,6 +16,7 @@ function ready() {
   arrowLeft.addEventListener('click', nextImageLeft)
   arrowRight.addEventListener('click', nextImageRight)
   setInterval(nextImageAuto, 10000)
+  document.addEventListener('scroll', phoneNumberSticky)
 }
 
 function nextImageAuto() {
@@ -54,4 +57,15 @@ function imageTransition() {
 function imageTransition2() {
   document.getElementsByClassName("slideshow-transition-image")[0].style.transition = ".5s"
   document.getElementsByClassName("slideshow-transition-image")[0].style.opacity = 0
+}
+
+function phoneNumberSticky(event) {
+  console.log(window.scrollY)
+  console.log(headerHeight)
+  if (window.scrollY > headerHeight) {
+    console.log('yoyoyoyo')
+    phoneElement.style.top = parseInt(window.scrollY) + 'px'
+  } else{
+    phoneElement.style.top = '-35px'
+  }
 }

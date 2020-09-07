@@ -10,8 +10,11 @@
 }
 
 :root {
-  --text-description-color: #777;
   --text-nav-color: white;
+  --header-bg-pri: rgba(0, 0, 0, .6);
+  --header-bg-sec: rgba(255, 255, 255, .3);
+
+  --text-description-color: #777;
   --description-dynamic-font: min(4vw, 2em);
 }
 
@@ -50,15 +53,15 @@ html, body {
 }
 
 .nav a:hover{
-  background-color: rgba(255, 255, 255, .3)
+  background-color: var(--header-bg-sec);
 }
 
 .main-nav {
   text-align: center;
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-weight: lighter;
   /* Nav at top or bottom */
-  border-top: 1px solid rgba(255, 255, 255, .3)
+  border-top: 1px solid var(--header-bg-sec);
 }
 
 .main-nav li{
@@ -67,9 +70,12 @@ html, body {
 
 .main-header {
   background-blend-mode: multiply;
-  background-color: rgba(0, 0, 0, .6);
+  background-color: var(--header-bg-pri);
   background-size: cover;
+  font-size: 1.1em;
+  overflow: visible;
 }
+
 
 .main-header-container {
   display: flex;
@@ -80,8 +86,19 @@ html, body {
 
 .header-content {
   color: var(--text-nav-color);
-  margin: 40px 0;
+  margin: 5% 0;
   width: 50%;
+}
+
+.peeker {
+  color: var(--text-nav-color);
+  background-color: var(--header-bg-pri);
+  position: absolute;
+  right: 5%;
+  padding: .5em;
+  border: 1px solid var(--header-bg-sec);
+  border-radius: 5px;
+  transition: .5s
 }
 
 .content-section {
