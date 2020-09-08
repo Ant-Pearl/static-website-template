@@ -21,7 +21,7 @@ function openImageBig(event) {
   document.getElementsByClassName('pp-image-big-container')[0].style.visibility = 'visible'
   document.getElementsByClassName('pp-image-big-container')[0].style.height = screen.height
   document.getElementsByClassName('pp-image-big')[0].src = event.target.src
-  document.getElementsByClassName('pp-image-big-description')[0].innerHTML = "Ligmaballs"
+  document.getElementsByClassName('pp-image-big-description')[0].innerHTML = event.target.parentElement.getElementsByClassName('zoomable-description')[0].innerHTML
 }
 
 function closeImageBig(event) {

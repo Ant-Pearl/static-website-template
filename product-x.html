@@ -10,6 +10,7 @@
     <meta name="description" content="This is the description">
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
     <script src="product-page.js" async></script>
+    <script src="image-zoomer.js" async></script>
   </head>
   <body>
     <header class="main-header">
@@ -42,7 +43,10 @@
       </div>
 
       <div class="product-page-gallery">
-        <img class="zoomable-image product-page-image" src="Images/placeholder.png" alt="">
+        <div>
+          <img class="zoomable-image product-page-image" src="Images/placeholder.png" alt="">
+          <span class="zoomable-description hidden-element">This is a placeholder image</span>
+        </div>
         <img class="zoomable-image product-page-image" src="Images/placeholder-purple.png" alt="">
         <img class="zoomable-image product-page-image" src="Images/placeholder.png" alt="">
         <img class="zoomable-image product-page-image" src="Images/placeholder-red.png" alt="">

@@ -367,7 +367,8 @@ html, body {
   position: absolute;
   visibility: hidden;
   opacity: 1;
-  background-color: rgb(0, 0, 0, .5)
+  background-color: rgb(0, 0, 0, .5);
+  z-index: 6;
 }
 
 .pp-image-big-content {
@@ -411,3 +412,8 @@ html, body {
   content: 'big cock';
 }
 */
+
+.hidden-element {
+  position: absolute;
+  visibility: hidden;
+}
