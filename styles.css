@@ -12,6 +12,7 @@
 :root {
   --text-nav-color: white;
   --header-bg-pri: rgba(0, 0, 0, .6);
+  --header-bg-pri: #666;
   --header-bg-sec: rgba(255, 255, 255, .3);
 
   --text-description-color: #777;
@@ -95,10 +96,12 @@ html, body {
   background-color: var(--header-bg-pri);
   position: absolute;
   right: 5%;
+  top: -35px;
   padding: .5em;
   border: 1px solid var(--header-bg-sec);
   border-radius: 5px;
-  transition: .5s
+  transition: .5s;
+  z-index: 4
 }
 
 .content-section {

@@ -4,6 +4,9 @@ if (document.readyState == 'loading') {
   ready()
 }
 
+var headerHeight = document.getElementsByTagName('header')[0].clientHeight
+var phoneElement = document.getElementsByClassName('peeker')[0]
+
 function ready() {
   var products = document.getElementsByClassName('product-header')
   for (var i = 0; i < products.length; i++) {
@@ -14,6 +17,7 @@ function ready() {
     product.parentElement.getElementsByClassName('product-summary')[0].style.position = 'absolute'
     product.parentElement.getElementsByClassName('product-summary')[0].style.visibility = 'hidden'
   }
+  document.addEventListener('scroll', peeker)
 
 }
 
@@ -35,7 +39,10 @@ function expandProduct(event) {
   }
 }
 
-function productTransition(productSummary) {
-  console.log(productSummary)
-
+function peeker(event) {
+  if (window.scrollY > headerHeight) {
+    phoneElement.style.top = parseInt(window.scrollY) + 'px'
+  } else{
+    phoneElement.style.top = '-35px'
+  }
 }

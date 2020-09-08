@@ -15,8 +15,8 @@ function ready() {
   var arrowRight = document.getElementsByClassName('arrow-right')[0]
   arrowLeft.addEventListener('click', nextImageLeft)
   arrowRight.addEventListener('click', nextImageRight)
-  setInterval(nextImageAuto, 10000)
-  document.addEventListener('scroll', phoneNumberSticky)
+  setInterval(nextImageAuto, 8000)
+  document.addEventListener('scroll', peeker)
 }
 
 function nextImageAuto() {
@@ -59,11 +59,8 @@ function imageTransition2() {
   document.getElementsByClassName("slideshow-transition-image")[0].style.opacity = 0
 }
 
-function phoneNumberSticky(event) {
-  console.log(window.scrollY)
-  console.log(headerHeight)
+function peeker(event) {
   if (window.scrollY > headerHeight) {
-    console.log('yoyoyoyo')
     phoneElement.style.top = parseInt(window.scrollY) + 'px'
   } else{
     phoneElement.style.top = '-35px'
