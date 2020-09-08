@@ -4,9 +4,6 @@ if (document.readyState == 'loading') {
   ready()
 }
 
-var headerHeight = document.getElementsByTagName('header')[0].clientHeight
-var phoneElement = document.getElementsByClassName('peeker')[0]
-
 function ready() {
   var gallery = document.getElementsByClassName('zoomable-image')
   for (var i = 0; i < gallery.length; i++) {
@@ -16,7 +13,6 @@ function ready() {
   document.addEventListener('scroll', closeImageBig)
   document.getElementsByClassName('pp-image-big-container')[0].addEventListener('click', closeImageBig)
   document.getElementsByClassName('pp-image-big')[0].addEventListener('click', openFullSizeImage)
-  document.addEventListener('scroll', peeker)
 }
 
 function openImageBig(event) {
@@ -34,12 +30,4 @@ function closeImageBig(event) {
 
 function openFullSizeImage(event) {
   window.open(event.target.src)
-}
-
-function peeker(event) {
-  if (window.scrollY > headerHeight) {
-    phoneElement.style.top = parseInt(window.scrollY) + 'px'
-  } else{
-    phoneElement.style.top = '-35px'
-  }
 }

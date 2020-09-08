@@ -115,6 +115,7 @@ html, body {
   padding: 0 1.2em;
 }
 
+
 .section-header {
   margin: 16px 0;
   font-weight: normal;
@@ -276,6 +277,29 @@ html, body {
   visibility: hidden;
 }
 
+.menu-gallery {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  padding: 0 1em;
+}
+
+.menu-item {
+  max-width: 250px;
+  margin: .5em;
+  height: auto;
+  text-align: center;
+}
+
+.menu-item-part {
+  margin: .3em;
+}
+
+.menu-item-image {
+  width: 200px;
+  height: 200px;
+}
+
 .product-summary-text {
   margin: .5em .5em;
   font-size: 150%;
@@ -376,3 +400,14 @@ html, body {
   border: 1px solid black;
   border-radius: 10px;
 }
+
+/*-----------psuedo decorations---------------------------------------------------------*/
+/*
+.slideshow::after {
+  content: url('placeholder.png');
+}
+
+.slideshow::after {
+  content: 'big cock';
+}
+*/
