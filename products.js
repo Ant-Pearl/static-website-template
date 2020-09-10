@@ -8,35 +8,41 @@ var headerHeight = document.getElementsByTagName('header')[0].clientHeight
 var phoneElement = document.getElementsByClassName('peeker')[0]
 
 function ready() {
-  var products = document.getElementsByClassName('product-header')
-  for (var i = 0; i < products.length; i++) {
-    var product = products[i]
-    product.addEventListener('click', expandProduct)
-    product.parentElement.getElementsByClassName('product-summary')[0].style.transition = '0s'
-    product.parentElement.getElementsByClassName('product-summary')[0].style.opacity = 0
-    product.parentElement.getElementsByClassName('product-summary')[0].style.position = 'absolute'
-    product.parentElement.getElementsByClassName('product-summary')[0].style.visibility = 'hidden'
+  var categories = document.getElementsByClassName('product-header')
+  for (var i = 0; i < categories.length; i++) {
+    var category = categories[i]
+    category.addEventListener('click', expandProduct)
+    category.parentElement.getElementsByClassName('product-summary')[0].style.transition = '0s'
+    category.parentElement.getElementsByClassName('product-summary')[0].style.opacity = 0
+    category.parentElement.getElementsByClassName('product-summary')[0].style.position = 'absolute'
+    category.parentElement.getElementsByClassName('product-summary')[0].style.visibility = 'hidden'
   }
   document.addEventListener('scroll', peeker)
-
 }
 
 function expandProduct(event) {
-  var product = event.target
+  var category = event.target
   //console.log(product.parentElement.getElementsByClassName('product-summary'))
-  var productSummary = product.parentElement.getElementsByClassName('product-summary')[0]
-  if (productSummary.style.position == 'relative') {
-    productSummary.style.transition = '0s'
-    productSummary.style.opacity = 0
-    productSummary.style.position = 'absolute'
-    productSummary.style.visibility = 'hidden'
+  var categorySummary = category.parentElement.getElementsByClassName('product-summary')[0]
+  if (categorySummary.style.position == 'relative') {
+    categorySummary.style.transition = '0s'
+    categorySummary.style.opacity = 0
+    categorySummary.style.position = 'absolute'
+    categorySummary.style.visibility = 'hidden'
   } else {
-    productSummary.style.transition = '.5s'
-    productSummary.style.position = 'relative'
-    productSummary.style.visibility = 'visible'
-    productSummary.style.opacity = 1
-    setTimeout(productTransition(productSummary), 20)
+    categorySummary.style.transition = '.5s'
+    categorySummary.style.position = 'relative'
+    categorySummary.style.visibility = 'visible'
+    categorySummary.style.opacity = 1
+    if (categorySummary.clientHeight > window.innerHeight) {
+      addCollapsePeekButton(category)
+    }
   }
+}
+
+function addCollapsePeekButton(category) {
+  document.getElementsByClassName('collapse-category-container')[0].innerHTML = `<img class="${category}" src="expand-arrow-up.png">`
+
 }
 
 function peeker(event) {

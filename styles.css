@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
 @font-face {
   font-family: "Booter - Zero Zero";
@@ -11,23 +12,35 @@
 
 :root {
   --text-nav-color: white;
-  --header-bg-pri: rgba(0, 0, 0, .6);
-  --header-bg-pri: #666;
-  --header-bg-sec: rgba(255, 255, 255, .3);
+  --header-bg-pri: rgba(183, 228, 199, 1);
+  --header-bg-sec: rgba(116, 198, 157, 1);
 
-  --text-description-color: #777;
+  --footer-bg-pri: #40916C;
+
+  --hover-color: rgba(255, 255, 255, .5);
+
+  --text-description-color: black;
+  --text-header-color: black;
   --description-dynamic-font: min(4vw, 2em);
+
+  --button: #2D6A4F;
+  --button-hover: #40916C;
+  --button-text: white;
+  --transparent-button: rgba(82, 183, 136, .5);
+  --transparent-button-hover: rgba(82, 183, 136, .9);
+  --category-hover: rgba(0, 0, 0, .3);
 }
 
 * {
   box-sizing: border-box;
-  font-family: Raleway;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 html, body {
-  width:
   margin: 0;
   padding: 0;
+  background-image: linear-gradient(to bottom right,#40916C, #D8F3DC);
+  background-color: #D8F3DC;
 }
 /*
 @media only screen and (max-width: 600px) {
@@ -70,10 +83,12 @@ html, body {
 }
 
 .main-header {
+  background-image: url("Images/food-header.jpg");
   background-blend-mode: multiply;
   background-color: var(--header-bg-pri);
   background-size: cover;
   font-size: 1.1em;
+  font-weight: bold;
   overflow: visible;
 }
 
@@ -91,18 +106,36 @@ html, body {
   width: 50%;
 }
 
+/*-----------------------------Javascript stickys-------------------------*/
+
 .peeker {
-  color: var(--text-nav-color);
-  background-color: var(--header-bg-pri);
+  color: var(--button-text);
+  background-color: var(--button);
   position: absolute;
   right: 5%;
   top: -35px;
   padding: .5em;
-  border: 1px solid var(--header-bg-sec);
+  border: 1px solid var(--text-description-color);
   border-radius: 5px;
   transition: .5s;
   z-index: 4
 }
+
+.collapse-category-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.collapse-category-arrow {
+  padding: .2em;
+}
+
+.collapse-category-arrow:hover {
+  background-color: var(--hover-color);
+}
+
+/*-----------------------------Other Formatting-------------------------*/
 
 .content-section {
   margin: 1em;
@@ -119,15 +152,15 @@ html, body {
 .section-header {
   margin: 16px 0;
   font-weight: normal;
-  color: #333;
+  color: var(--text-header-color);
   text-align: center;
   font-size: 2.5em;
 }
 
 .main-footer {
   display: flex;
-  background-color: #888;
   color: var(--text-nav-color);
+  background-color: var(--footer-bg-pri);
   padding: .25em 0;
   width: 100%;
   justify-content: center;
@@ -167,11 +200,11 @@ html, body {
 }
 
 .footer-socials img:hover {
-  background-color: #777;
+  background-color: var(--category-hover);
 }
 
 .btn {
-  color: #333;
+  color: var(button);
 }
 
 /*--------------------------------------------specifics---------------------------- */
@@ -210,13 +243,13 @@ html, body {
   width: 50px;
   height: 50px;
   opacity: .5;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--transparent-button);
   border-radius: 50%;
   z-index: 2;
 }
 
 .arrow:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--transparent-button-hover);
 }
 
 .arrow-right {
@@ -251,7 +284,7 @@ html, body {
 }
 
 .product-header:hover {
-  background-color: rgba(0, 0, 0, .3);
+  background-color: var(--category-hover);
 }
 
 .product-header-element {
@@ -272,6 +305,7 @@ html, body {
 .product-summary {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 0 1em;
   position: absolute;
   visibility: hidden;
@@ -279,6 +313,7 @@ html, body {
 
 .menu-gallery {
   display: flex;
+  justify-content: center;
   flex-direction: row;
   flex-flow: wrap;
   padding: 0 1em;
@@ -298,6 +333,12 @@ html, body {
 .menu-item-image {
   width: 200px;
   height: 200px;
+  padding: 5px;
+  transition: .5s;
+}
+
+.menu-item-image:hover {
+  padding: 0px;
 }
 
 .product-summary-text {
@@ -322,13 +363,14 @@ html, body {
   margin: auto 10%;
   padding: 5% 10%;
   font-size: 2em;
-  border: 1px solid #999;
-  background-color: #aaa;
+  color: var(--button-text);
+  border: 1px solid var(--text-description-color);
+  background-color: var(--button);
 }
 
 .product-summary-btn:hover {
-  background-color: #999;
-  border: 1px solid #666;
+  background-color: var(--button-hover);
+  border: 1px solid var(--text-description-color);
 }
 
 .product-page-info {
