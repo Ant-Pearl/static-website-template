@@ -22,6 +22,10 @@
   --text-description-color: black;
   --text-header-color: black;
   --description-dynamic-font: min(4vw, 2em);
+  --image-border: #081C15;
+  --text-box-popup: rgba(216, 243, 220, .8);
+  --div-border: rgba(216, 243, 220, 1);
+  --div-background: #081C15;
 
   --button: #2D6A4F;
   --button-hover: #40916C;
@@ -219,6 +223,7 @@ html, body {
 .slideshow-image {
   position: relative;
   align-self: center;
+  border: 2px solid var(--image-border);
   margin: 2em 0;
   max-height: 600px;
   max-width: 75%;
@@ -311,36 +316,6 @@ html, body {
   visibility: hidden;
 }
 
-.menu-gallery {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-flow: wrap;
-  padding: 0 1em;
-}
-
-.menu-item {
-  max-width: 250px;
-  margin: .5em;
-  height: auto;
-  text-align: center;
-}
-
-.menu-item-part {
-  margin: .3em;
-}
-
-.menu-item-image {
-  width: 200px;
-  height: 200px;
-  padding: 5px;
-  transition: .5s;
-}
-
-.menu-item-image:hover {
-  padding: 0px;
-}
-
 .product-summary-text {
   margin: .5em .5em;
   font-size: 150%;
@@ -356,6 +331,7 @@ html, body {
   width: 50%;
   height: auto;
   overflow: hidden;
+  border: 1px solid var(--image-border);
 }
 
 .product-summary-btn {
@@ -398,6 +374,50 @@ html, body {
   padding: 0;
 }
 
+/*---------------------------------------Menu-----------------------------------*/
+
+.menu-gallery {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-flow: wrap;
+  padding: 0 1em;
+}
+
+.menu-item {
+  max-width: 250px;
+  margin: .5em;
+  height: auto;
+  text-align: center;
+}
+
+.menu-item-part {
+  margin: .3em;
+}
+
+.menu-item-title {
+  padding-top: 6px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.menu-item-description {
+  padding-bottom: 6px;
+}
+
+.menu-item-image {
+  width: 200px;
+  height: 200px;
+  padding: 5px;
+  transition: .5s;
+}
+
+.menu-item-image:hover {
+  padding: 0px;
+}
+
+/*---------------------------------Zoom in---------------------------------------*/
+
 .pp-image-big-container {
   display: flex;
   margin-left: auto;
@@ -427,7 +447,7 @@ html, body {
   max-width: 90%;
   margin-top: 1%;
   background-color: rgba(0, 0, 0, 0.8);
-  border: 1em solid black;
+  border: 1em solid var(--image-border);
   border-radius: 10px;
   height: auto;
   max-height: 90%;
@@ -439,8 +459,8 @@ html, body {
   font-weight: bold;
   margin: 1em;
   padding: .5em;
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid black;
+  background-color: var(--text-box-popup);
+  border: 1px solid var(--image-border);
   border-radius: 10px;
 }
 
@@ -458,4 +478,12 @@ html, body {
 .hidden-element {
   position: absolute;
   visibility: hidden;
+}
+
+.boxed-div {
+  border: 4px solid var(--div-border);
+  background-color: var(--div-background);
+  background-image: linear-gradient(to bottom right, #081C15, #2D6A4F);
+  color: white;
+  border-radius: 1em;
 }
