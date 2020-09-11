@@ -100,6 +100,7 @@ html, body {
 .main-header-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   text-align: center;
   margin: 0;
 }
@@ -149,7 +150,7 @@ html, body {
 .container {
   max-width: 1150px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 .5em;
 }
 
 
@@ -320,9 +321,13 @@ html, body {
   font-size: 150%;
 }
 
-.product-summary-content {
+.product-summary-row {
   display: flex;
   flex-direction: row;
+}
+
+.product-summary-row *{
+  margin: 5px;
 }
 
 .product-summary-image {
@@ -335,12 +340,11 @@ html, body {
 
 .product-summary-btn {
   width: 50%;
-  margin: auto 10%;
-  padding: 5% 10%;
   font-size: 2em;
   color: var(--button-text);
   border: 1px solid var(--text-description-color);
   background-color: var(--button);
+  background-image: linear-gradient(to bottom right, #081C15, #2D6A4F);
 }
 
 .product-summary-btn:hover {
@@ -447,6 +451,7 @@ html, body {
   width: 80%;
   height: auto;
   justify-content: center;
+  align-items: center;
 }
 
 .pp-image-big {
@@ -462,6 +467,9 @@ html, body {
 }
 
 .pp-image-big-description {
+  display: flex;
+  align-self: center;
+  justify-content: center;
   font-size: 2em;
   font-weight: bold;
   margin: 1em;
