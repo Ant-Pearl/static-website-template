@@ -397,7 +397,7 @@ html, body {
 
 .menu-item-title {
   padding-top: 6px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   max-width: 250px;
   max-height: 250px;
@@ -405,7 +405,7 @@ html, body {
 
 .menu-item-description {
   padding-bottom: 6px;
-  font-size: .9rem;
+  font-size: 1rem;
   max-width: 250px;
 }
 
