@@ -385,7 +385,7 @@ html, body {
 }
 
 .menu-item {
-  max-width: 250px;
+  max-width: 50%;
   margin: .5em;
   height: auto;
   text-align: center;
@@ -399,15 +399,17 @@ html, body {
   padding-top: 6px;
   font-size: 1.2em;
   font-weight: bold;
+  max-width: 250px;
 }
 
 .menu-item-description {
   padding-bottom: 6px;
+  max-width: 250px;
 }
 
 .menu-item-image {
   width: 200px;
-  height: 200px;
+  height: auto;
   padding: 5px;
   transition: .5s;
 }
