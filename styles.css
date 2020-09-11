@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
 
 @font-face {
   font-family: "Booter - Zero Zero";
@@ -387,6 +387,7 @@ html, body {
 .menu-item {
   max-width: 50%;
   margin: .5em;
+  padding: 6px;
   height: auto;
   text-align: center;
 }
@@ -396,16 +397,18 @@ html, body {
 }
 
 .menu-item-title {
-  padding-top: 6px;
   font-size: 1.5rem;
   font-weight: bold;
   max-width: 250px;
-  max-height: 250px;
+}
+
+.menu-item-title{
+  font-family: 'Yellowtail', cursive;
 }
 
 .menu-item-description {
-  padding-bottom: 6px;
   font-size: 1rem;
+  font-style: italic;
   max-width: 250px;
 }
 
