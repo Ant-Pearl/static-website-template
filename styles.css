@@ -381,7 +381,6 @@ html, body {
   justify-content: center;
   flex-direction: row;
   flex-flow: wrap;
-  padding: 0 1em;
 }
 
 .menu-item {
