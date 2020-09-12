@@ -15,6 +15,6 @@ function peeker(event) {
   if (window.scrollY > headerHeight) {
     phoneElement.style.top = parseInt(window.scrollY) + 'px'
   } else{
-    phoneElement.style.top = '-35px'
+    phoneElement.style.top = '-70px'
   }
 }
