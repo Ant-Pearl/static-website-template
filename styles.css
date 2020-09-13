@@ -275,9 +275,12 @@ html, body {
 }
 
 .paragraph-description {
-  margin-bottom: 2em;
   /*font-size: 1.2em;*/
   font-size: var(--description-dynamic-font);
+}
+
+.main-index-description {
+  margin-bottom: 1em;
 }
 
 .main-product-container {
@@ -388,6 +391,49 @@ html, body {
 
 .product-page-image:hover {
   padding: 0;
+}
+
+/*---------------------------------------ABOUT PAGE--------------------------------*/
+.about-section {
+  display: flex;
+}
+
+.about-image {
+  height: 200px;
+  width: auto;
+  border-radius: 50%;
+  padding: 0 .2em .2em 0;
+}
+
+.main-about-description {
+  margin: .2em 0;
+}
+
+.google-maps {
+  display: block;
+  margin: 0 auto;
+}
+
+.google-maps-mobile {
+  position: absolute;
+  visibility: hidden;
+}
+.google-maps-desktop {
+  display: block;
+  position: relative;
+  visibility: visible;
+}
+
+@media only screen and (max-width: 600px) {
+  .google-maps-mobile {
+    position: relative;
+    visibility: visible;
+    align-self: center;
+  }
+  .google-maps-desktop {
+    position: absolute;
+    visibility: hidden;
+  }
 }
 
 /*---------------------------------------Menu-----------------------------------*/
