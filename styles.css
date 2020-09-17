@@ -361,11 +361,16 @@ html, body {
 }
 
 .product-summary-image {
-  object-fit: cover;
+  object-fit: fill;
   width: 50%;
   height: auto;
   overflow: hidden;
+
   border: 1px solid var(--image-border);
+}
+
+.wide-image-fit-square {
+  object-fit: cover;
 }
 
 .product-summary-btn {
