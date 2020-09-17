@@ -70,6 +70,7 @@ html, body {
   display: inline-block;
   padding: .5em;
   color: var(--text-nav-color);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   text-decoration: none;
 }
 
@@ -110,9 +111,24 @@ html, body {
 
 .header-content {
   color: var(--text-nav-color);
+  font-size: 1.5em;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   margin: 5% 0;
   width: 50%;
 }
+
+.company-branding {
+  max-width: 25%;
+  height: auto;
+  background: linear-gradient(to bottom right,#40916C, white);
+  border: 1px solid var(--image-border);
+  border-radius: 50%;
+}
+
+.company-main-branding {
+  max-width: 35%;
+}
+
 
 /*-----------------------------Javascript stickys-------------------------*/
 
