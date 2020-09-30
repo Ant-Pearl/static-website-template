@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Metrophobic&display=swap');
 
 @font-face {
   font-family: "Booter - Zero Zero";
@@ -18,9 +19,10 @@
   --header-bg-sec: rgba(116, 198, 157, 1);
 
   --footer-bg-pri: #40916C;
+  /*#40916C*/
 
   --hover-color: rgba(255, 255, 255, .5);
-  --divider: #081C15;
+  --divider: #2D6A4F;
 
   --text-description-color: black;
   --text-header-color: black;
@@ -29,6 +31,7 @@
   --text-box-popup: rgba(216, 243, 220, .8);
   --div-border: rgba(216, 243, 220, 1);
   --div-background: #081C15;
+  --header-background: #40916C;
 
   --button: #2D6A4F;
   --button-hover: #40916C;
@@ -41,13 +44,15 @@
 * {
   box-sizing: border-box;
   font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Metrophobic', sans-serif;
+  line-height: 1.2;
 }
 
 html, body {
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(to bottom right,#40916C, #D8F3DC);
   background-color: #D8F3DC;
+  background: #DEDEDE;
 }
 /*
 @media only screen and (max-width: 600px) {
@@ -199,9 +204,6 @@ html, body {
 .company-branding {
   max-width: 25%;
   height: auto;
-  background: linear-gradient(to bottom right,#40916C, white);
-  border: 1px solid var(--image-border);
-  border-radius: 1em;
 }
 
 .company-main-branding {
@@ -226,11 +228,13 @@ html, body {
   font-size: 2.5em;
   font-family: Raleway, sans-serif;
   font-weight: lighter;
+  background: var(--header-background);
   border-bottom: 2px solid var(--divider)
 }
 
 .section-header-small {
   padding: 16px 0;
+  margin: 0 10px;
   font-size: 2em;
   font-family: Raleway, sans-serif;
   font-weight: lighter;
@@ -300,6 +304,7 @@ html, body {
 .paragraph-description {
   /*font-size: 1.2em;*/
   font-size: var(--description-dynamic-font);
+  margin: 0 10px;
 }
 
 .main-index-description {
@@ -386,19 +391,17 @@ html, body {
   color: var(--button-text);
   border: 1px solid var(--text-description-color);
   background-color: var(--button);
-  background-image: linear-gradient(to bottom right, #081C15, #2D6A4F);
-  border-radius: 7px;
+  border-radius: 2px;
 }
 
 .product-summary-btn:hover {
-  background-image: linear-gradient(to bottom right, #081C15, #2D6A4F);
   background-color: var(--button-hover);
   background-blend-mode: multiply;
   border: 1px solid var(--text-description-color);
 }
 
 .product-page-info {
-  margin: 1em 0;
+  margin: 1em 10px;
   font-size: var(--description-dynamic-font);
   flex-wrap: wrap;
 }
@@ -431,6 +434,22 @@ html, body {
 
 .product-page-image:hover {
   padding: 0;
+}
+
+.qs-main-container {
+  text-align: center;
+  margin: 1em 2em;
+  padding: .5em;
+}
+
+.qs-main-container span{
+  font-size: 1.5em;
+  margin: .5em;
+  padding: 2px 5px;
+}
+
+.qs-main-container span:hover{
+  background: rgba(0, 0, 0, 0.5);
 }
 
 /*---------------------------------------ABOUT PAGE--------------------------------*/
@@ -601,15 +620,13 @@ html, body {
 .boxed-div {
   border: 4px solid var(--div-border);
   background-color: var(--div-background);
-  background-image: linear-gradient(to bottom right, #081C15, #2D6A4F);
   color: white;
-  border-radius: 1em;
+  border-radius: 2px;
 }
 
 .boxed-div-big {
   border: 4px solid #D8F3DC;
   background-color: var(--div-background);
-  background-image: linear-gradient(to bottom right, #081C15, #40916C);
   color: white;
-  border-radius: 1em;
+  border-radius: 2px;
 }
