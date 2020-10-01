@@ -30,21 +30,26 @@ function expandProduct(event) {
     categorySummary.style.opacity = 0
     categorySummary.style.position = 'absolute'
     categorySummary.style.visibility = 'hidden'
+    event.target.getElementsByClassName('product-expand')[0].style.transform = "rotate(0deg)"
   } else {
     categorySummary.style.transition = '.5s'
     categorySummary.style.position = 'relative'
     categorySummary.style.visibility = 'visible'
     categorySummary.style.opacity = 1
+    event.target.getElementsByClassName('product-expand')[0].style.transform = "rotate(180deg)"
     if (categorySummary.clientHeight > window.innerHeight) {
-      addCollapsePeekButton(category)
+      //addCollapsePeekButton(category)
     }
   }
 }
 
-function addCollapsePeekButton(category) {
-  document.getElementsByClassName('collapse-category-container')[0].innerHTML = `<img class="${category}" src="expand-arrow-up.png">`
 
-}
+//function addCollapsePeekButton(category) {
+//  var expandUp = `
+//  <img class="${category}" src="Images/expand-arrow-up.png">`
+//  document.getElementsByClassName('collapse-category-container')[0].innerHTML = expandUp
+
+//}
 
 function peeker(event) {
   if (window.scrollY > headerHeight) {
