@@ -490,13 +490,15 @@ background: rgba(8, 28, 21, 0.25);
 @media only screen and (max-width: 600px) {
   .qs-main-container {
     display: block;
-    justify-content: center;
+    padding: .5em auto;
   }
   .qs-main-container span{
-    display: block;
+    display: flex;
     justify-content: center;
+    margin: .1em auto;
   }
 }
+
 
 .template-showcase-qs span{
   width: 25%;
@@ -504,6 +506,16 @@ background: rgba(8, 28, 21, 0.25);
 
 .template-showcase-qs span:hover{
   width: 35%;
+}
+
+@media only screen and (max-width: 600px) {
+  .template-showcase-qs span{
+    width: auto;
+  }
+
+  .template-showcase-qs span:hover{
+    width: auto;
+  }
 }
 
 .qs-section{
