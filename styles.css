@@ -480,6 +480,9 @@ background: rgba(8, 28, 21, 0.25);
 }
 
 @media only screen and (max-width: 600px) {
+  .qs-main-container {
+    display: block;
+  }
   .qs-main-container span{
     display: block;
   }
