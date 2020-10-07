@@ -379,6 +379,14 @@ background: rgba(8, 28, 21, 0.25);
   margin: 5px;
 }
 
+@media only screen and (max-width: 600px) {
+  .mobile-wrap {
+    flex-wrap: wrap;
+  }
+}
+
+
+
 .product-summary-image {
   object-fit: fill;
   width: 50%;
@@ -482,9 +490,11 @@ background: rgba(8, 28, 21, 0.25);
 @media only screen and (max-width: 600px) {
   .qs-main-container {
     display: block;
+    justify-content: center;
   }
   .qs-main-container span{
     display: block;
+    justify-content: center;
   }
 }
 
