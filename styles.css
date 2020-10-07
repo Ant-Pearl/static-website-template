@@ -78,6 +78,7 @@ html, body {
   padding: .5em;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   text-decoration: none;
+  transition: .3s background-color;
 }
 
 .nav a:hover{
@@ -90,6 +91,7 @@ html, body {
   font-weight: lighter;
   /* Nav at top or bottom */
   border-top: 1px solid var(--header-bg-sec);
+background: rgba(8, 28, 21, 0.25);
 }
 
 .main-nav li{
@@ -163,6 +165,7 @@ html, body {
   padding: 8px;
   width: 40px;
   height: 40px;
+  transition: .3s background-color;
 }
 
 .footer-socials img:hover {
@@ -235,8 +238,8 @@ html, body {
 }
 
 .section-header-small {
-  padding: 16px 0;
-  margin: 0 10px;
+  padding: 0;
+  padding: 10px 10px;
   font-size: 2em;
   font-family: Raleway, sans-serif;
   font-weight: lighter;
@@ -288,6 +291,7 @@ html, body {
   opacity: .5;
   border-radius: 50%;
   z-index: 2;
+  transition: .3s background-color;
 }
 
 .arrow:hover {
@@ -327,6 +331,7 @@ html, body {
   align-items: center;
   padding: .5em 0;
   margin: 0 12%;
+  transition: .3s background-color;
 }
 
 .product-header:hover {
@@ -395,6 +400,7 @@ html, body {
   font-size: 2em;
   border: 1px solid var(--button-border);
   border-radius: 2px;
+  transition: .3s background-color;
 }
 
 .product-summary-btn:hover {
@@ -409,7 +415,6 @@ html, body {
 }
 
 .product-page-gallery {
-  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 1.1em 0;
@@ -439,6 +444,20 @@ html, body {
   padding: 0;
 }
 
+.product-page-gallery-header {
+  display: block;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product-page-gallery-subsection {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 /* --------------------------------------Quick Scroller------------------------------------------ */
 
 .qs-main-container {
@@ -446,6 +465,7 @@ html, body {
   text-align: center;
   margin: 1em 2em;
   padding: .5em;
+  align-items: center;
 }
 
 .qs-main-container span{
@@ -466,11 +486,27 @@ html, body {
 }
 
 .template-showcase-qs span{
-  width: 33.3333%;
+  width: 25%;
 }
 
 .template-showcase-qs span:hover{
-  width: 43%;
+  width: 35%;
+}
+
+.qs-section{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all .3s;
+}
+
+.qs-section:after {
+  content: url('Images/expand-arrow-up.png');
+  margin: 0 5%;
+}
+
+.qs-section:hover {
+  background: var(--category-hover);
 }
 
 
@@ -599,15 +635,16 @@ html, body {
   position: relative;
   max-width: 90%;
   margin-top: 1%;
-  border: 1em solid var(--image-border);
-  border-radius: 10px;
+  border: .5em solid var(--image-border);
+  border-radius: 2px;
   height: auto;
   max-height: 90%;
   object-fit: contain;
+  transition: .3s filter;
 }
 
 .pp-image-big:hover {
-  border: .5em solid var(--image-border)
+  filter: contrast(150%)
 }
 
 .pp-image-big-description {
@@ -620,7 +657,7 @@ html, body {
   margin: 1em;
   padding: .5em;
   border: 1px solid var(--image-border);
-  border-radius: 10px;
+  border-radius: 2px;
 }
 
 /*-----------psuedo decorations---------------------------------------------------------*/
