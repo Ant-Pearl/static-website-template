@@ -404,10 +404,9 @@ background: rgba(8, 28, 21, 0.25);
 @media only screen and (max-width: 600px) {
   .mobile-wrap {
     flex-wrap: wrap;
+    align-items: center;
   }
 }
-
-
 
 .product-summary-image {
   object-fit: fill;
