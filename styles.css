@@ -558,11 +558,18 @@ background: rgba(8, 28, 21, 0.25);
   display: flex;
 }
 
+@media only screen and (max-width: 600px) {
+  .about-section {
+    display: block;
+  }
+}
+
 .about-image {
   height: 200px;
   width: auto;
   border-radius: 50%;
   padding: 0 .2em .2em 0;
+  margin: auto;
 }
 
 .main-about-description {
