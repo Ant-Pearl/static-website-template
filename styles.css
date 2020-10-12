@@ -108,6 +108,9 @@ background: rgba(8, 28, 21, 0.25);
   overflow: visible;
 }
 
+.company-hook {
+  overflow: hidden;
+}
 
 .main-header-container {
   display: flex;
@@ -555,12 +558,12 @@ background: rgba(8, 28, 21, 0.25);
 
 /*---------------------------------------ABOUT PAGE--------------------------------*/
 .about-section {
-  display: inline-block;
+  display: flex;
 }
 
 @media only screen and (max-width: 600px) {
   .about-section {
-    display: block;
+    display: inline-block;
   }
 }
 
@@ -570,13 +573,8 @@ background: rgba(8, 28, 21, 0.25);
   border-radius: 50%;
   padding: 0 .2em .2em 0;
   margin: auto;
+  /*can kinda center hori with % margin here*/
   text-align: center;
-}
-
-@media only screen and (max-width: 600px) {
-  .about-image {
-    height: auto;
-  }
 }
 
 .main-about-description {
