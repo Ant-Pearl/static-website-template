@@ -33,10 +33,10 @@
   --div-background: #B7E4C7;
   --header-background: #B7E4C7;
 
-  --button: #40916C;
+  --button: #1B4332;
   --button-border: #2D6A4F;
-  --button-hover: #52B788;
-  --button-text: black;
+  --button-hover: #40916C;
+  --button-text: white;
   --transparent-button: rgba(45, 106, 79, .5);
   --transparent-button-hover: rgba(27, 67, 50, .9);
   --category-hover: #D8F3DC;
@@ -52,6 +52,7 @@
 html, body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   background-color: #D8F3DC;
   background: #DEDEDE;
 }
@@ -258,7 +259,13 @@ background: rgba(8, 28, 21, 0.25);
 
 .index-bullet-box {
   padding: 1em;
-  min-width: 30%;
+  min-width: 25%;
+}
+
+@media only screen and (max-width: 800px) {
+  .mobile-wrap .index-bullet-box {
+    min-width: 100%;
+  }
 }
 
 .index-bullet-box li {
@@ -401,7 +408,7 @@ background: rgba(8, 28, 21, 0.25);
   margin: 5px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .mobile-wrap {
     flex-wrap: wrap;
     align-items: center;
@@ -464,7 +471,7 @@ background: rgba(8, 28, 21, 0.25);
   margin: 5px;
   padding: 10px;
   min-width: 350px;
-  max-width: 50%
+  max-width: 50%;
   height: auto;
   transition: .5s;
 }
