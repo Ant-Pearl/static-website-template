@@ -18,7 +18,7 @@ function ready() {
 function openImageBig(event) {
   document.getElementsByClassName('pp-image-big-container')[0].style.top = parseInt(window.scrollY) + 'px'
   document.getElementsByClassName('pp-image-big-container')[0].height = window.innerHeight
-  document.getElementsByClassName('pp-image-big-container')[0].style.visibility = 'visible'
+  document.getElementsByClassName('pp-image-big-container')[0].style.display = 'flex'
   document.getElementsByClassName('pp-image-big-container')[0].style.height = window.innerHeight
   document.getElementsByClassName('pp-image-big')[0].src = event.target.src
   document.getElementsByClassName('pp-image-big-description')[0].innerHTML = event.target.parentElement.getElementsByClassName('zoomable-description')[0].innerHTML
@@ -29,7 +29,7 @@ function openImageBig(event) {
 }
 
 function closeImageBig(event) {
-  document.getElementsByClassName('pp-image-big-container')[0].style.visibility = 'hidden'
+  document.getElementsByClassName('pp-image-big-container')[0].style.display = 'none'
 }
 
 function openFullSizeImage(event) {

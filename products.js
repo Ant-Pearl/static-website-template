@@ -14,9 +14,6 @@ function ready() {
     var category = categories[i]
     category.addEventListener('click', expandProduct)
     category.parentElement.getElementsByClassName('product-summary')[0].style.transition = '0s'
-    category.parentElement.getElementsByClassName('product-summary')[0].style.opacity = 0
-    category.parentElement.getElementsByClassName('product-summary')[0].style.position = 'absolute'
-    category.parentElement.getElementsByClassName('product-summary')[0].style.visibility = 'hidden'
   }
   document.addEventListener('scroll', peeker)
 }
@@ -25,17 +22,14 @@ function expandProduct(event) {
   var category = event.target
   //console.log(product.parentElement.getElementsByClassName('product-summary'))
   var categorySummary = category.parentElement.getElementsByClassName('product-summary')[0]
-  if (categorySummary.style.position == 'relative') {
+  if (categorySummary.style.display == 'flex') {
     categorySummary.style.transition = '0s'
-    categorySummary.style.opacity = 0
-    categorySummary.style.position = 'absolute'
-    categorySummary.style.visibility = 'hidden'
+    categorySummary.style.display = 'none'
+    console.log(categorySummary.style.display)
     event.target.getElementsByClassName('product-expand')[0].style.transform = "rotate(0deg)"
   } else {
     categorySummary.style.transition = '.5s'
-    categorySummary.style.position = 'relative'
-    categorySummary.style.visibility = 'visible'
-    categorySummary.style.opacity = 1
+    categorySummary.style.display = 'flex'
     event.target.getElementsByClassName('product-expand')[0].style.transform = "rotate(180deg)"
     if (categorySummary.clientHeight > window.innerHeight) {
       //addCollapsePeekButton(category)
